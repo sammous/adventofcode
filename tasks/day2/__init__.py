@@ -1,0 +1,1 @@
+from day2 import task1, task2
