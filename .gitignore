@@ -1,3 +1,13 @@
+.idea/
+
+afc_scala/RUNNING_PID
+afc_scala/logs/
+afc_scala/project/*-shim.sbt
+afc_scala/project/project/
+afc_scala/project/target/
+afc_scala/target/
+afc_scala/.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
