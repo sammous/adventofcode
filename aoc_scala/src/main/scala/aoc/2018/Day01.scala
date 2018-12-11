@@ -1,8 +1,6 @@
 package aoc
 
-import scala.util.parsing.combinator.RegexParsers
-
-object Day01 extends Base2018[List[String], Int, Int] with RegexParsers {
+object Day01 extends Base2018[List[String], Int, Int] {
 
   override val input: List[String] = getInputFile
 
@@ -19,6 +17,14 @@ object Day01 extends Base2018[List[String], Int, Int] with RegexParsers {
   }
 
   override def solvePart2(input: List[String]): Int = {
-    0
+    def loop(l: List[Int]) : Int = {
+      l.diff(l.distinct).distinct.length match {
+        case 0 => loop(l.dropRight(1) ++ input.map(get_sign).scanLeft(l.last)(_ + _))
+        case x => l.diff(l.distinct).distinct.head
+      }
+    }
+
+    loop(l=input.map(get_sign).scanLeft(0)(_ + _))
   }
- }
+
+}
