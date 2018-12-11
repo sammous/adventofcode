@@ -10,5 +10,5 @@ matrix:
     
     - language: scala
       scala: 
-        - 2.12
+        - '2.12'
       script: cd aoc_scala && sbt clean test
