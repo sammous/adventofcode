@@ -19,8 +19,7 @@ object Day01 extends Base2020[List[Int], Int, Int] {
   }
 
   override def solvePart1(input: List[Int]): Int = {
-    val l = rec(input.tail, input.head)
-    return (l(0) * l(1))
+    rec(input.tail, input.head).reduceLeft(_ * _)
   }
 
   override def solvePart2(input: List[Int]): Int = 241861950
