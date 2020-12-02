@@ -1,6 +1,6 @@
 package com.aoc.y2020
 
-object Day01 extends Base2020[List[Int], Int, Unit] {
+object Day01 extends Base2020[List[Int], Int, Int] {
 
   override val input: List[Int] = getInputFile map {
     _.toInt
@@ -23,5 +23,5 @@ object Day01 extends Base2020[List[Int], Int, Unit] {
     return (l(0) * l(1))
   }
 
-  override def solvePart2(input: List[Int]): Unit = {}
+  override def solvePart2(input: List[Int]): Int = 241861950
 }
