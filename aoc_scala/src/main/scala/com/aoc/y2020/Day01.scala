@@ -22,5 +22,12 @@ object Day01 extends Base2020[List[Int], Int, Int] {
     rec(input.tail, input.head).reduceLeft(_ * _)
   }
 
-  override def solvePart2(input: List[Int]): Int = 241861950
+  override def solvePart2(input: List[Int]): Int = {
+    for (i <- input; j <- input; k <- input) {
+      if (i + j + k == 2020) {
+        return i * j * k
+      }
+    }
+    0
+   }
 }
