@@ -6,6 +6,9 @@ on:
   pull_request:
     branches:
         - master
+defaults:
+  run:
+    working-directory: aoc_scala
 jobs:
   test:
     runs-on: ubuntu-latest
